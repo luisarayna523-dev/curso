@@ -1,221 +1,193 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EZORDIUM7 VIP - CURSOS</title>
+    <title>VIP CURSOS EZORDIUM</title>
     <style>
-        /* CSS IDÊNTICO AO SEU INDEX.HTML */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d0d0d;
-            color: #ffffff;
-            margin: 0;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Text+Me+One&display=swap');
+
+        :root {
+            --red: #f00;
+            --bg: #000;
+            --panel: #0a0a0a;
+            --font-destaque: 'Audiowide', cursive;
         }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Text Me One', sans-serif;
+            margin: 0; padding: 10px;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        .container { width: 100%; max-width: 500px; position: relative; z-index: 10; }
 
         .header {
+            border: 2px solid var(--red);
             text-align: center;
-            padding: 20px 0;
-            width: 100%;
-            border-bottom: 2px solid #ff0000;
-            margin-bottom: 20px;
-            background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+            padding: 25px 10px;
+            background: rgba(15, 0, 0, 0.9);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+            margin-bottom: 25px;
         }
 
-        .header h1 {
-            margin: 0;
-            color: #ff0000;
-            font-size: 24px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-        }
+        h1 { font-family: var(--font-destaque); font-size: 22px; text-shadow: 0 0 10px var(--red); margin: 5px 0; }
+        .price { font-family: var(--font-destaque); color: var(--red); font-size: 45px; text-shadow: 0 0 20px var(--red); margin: 10px 0; }
 
-        .header p {
-            margin: 5px 0 0;
-            font-size: 13px;
-            color: #888;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 800px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #161616;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        .section {
+            background: var(--panel);
             border: 1px solid #222;
-        }
-
-        th {
-            background-color: #ff0000;
-            color: white;
+            border-left: 4px solid var(--red);
             padding: 15px;
-            text-align: left;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 20px;
         }
 
-        td {
-            padding: 14px 18px;
-            border-bottom: 1px solid #222;
+        .title { font-family: var(--font-destaque); color: var(--red); font-size: 14px; margin-bottom: 12px; text-transform: uppercase; border-bottom: 1px solid #300; padding-bottom: 5px; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+        .item {
+            font-size: 12px; padding: 6px;
+            background: rgba(20, 0, 0, 0.6);
+            border-bottom: 1px solid #200;
+            color: #ccc;
+        }
+        .item b { color: var(--red); margin-right: 4px; }
+
+        .footer-box { text-align: center; margin-top: 20px; border-top: 1px solid #222; padding-top: 20px; }
+        .refs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
+        .icon-red { font-size: 24px; color: var(--red); text-shadow: 0 0 10px var(--red); margin-bottom: 5px; }
+        .ref-val { font-family: var(--font-destaque); font-size: 13px; color: #fff; }
+        .ref-label { font-size: 10px; color: #777; text-transform: uppercase; }
+
+        .pix-alert {
+            font-family: var(--font-destaque);
+            color: var(--red);
             font-size: 14px;
-            transition: 0.3s;
+            margin: 25px 0;
+            text-shadow: 0 0 10px var(--red);
+            animation: blink 1s infinite;
         }
-
-        tr:nth-child(even) { background-color: #1c1c1c; }
-        tr:hover { background-color: #252525; }
-
-        /* SEPARADORES DE CATEGORIA */
-        .category-row {
-            background-color: #2a2a2a !important;
-            color: #ff0000;
-            font-weight: bold;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 2px;
-            border-top: 2px solid #333;
-        }
-
-        .vip-badge {
-            background-color: #ff0000;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 20px;
-            font-size: 10px;
-            font-weight: bold;
-            float: right;
-            box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
-        }
+        @keyframes blink { 50% { opacity: 0.4; } }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <h1>EZORDIUM7 VIP</h1>
-        <p>CONCURSOS, MENTORIA E QUALIFICAÇÃO PROFISSIONAL</p>
+        <div style="font-size: 9px; letter-spacing: 3px; color: #888;">CONTÉM +200 CURSOS</div>
+        <h1>VIP CURSOS EZORDIUM</h1>
+        <div class="price">R$ 20,00</div>
+        <div style="font-size: 11px; color: #666; font-family: var(--font-destaque);">QUALIFICAÇÃO PROFISSIONAL</div>
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>CONTEÚDO COMPLETO DISPONÍVEL</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="category-row"><td colspan="2">💻 TECNOLOGIA E HACKING</td></tr>
-            <tr><td>👑 CURSOS HACKERS <span class="vip-badge">VIP</span></td></tr>
-            <tr><td>👑 CURSOS DEV <span class="vip-badge">VIP</span></td></tr>
-            <tr><td>👑 CURSO DE INTELIGÊNCIA ARTIFICIAL <span class="vip-badge">NOVO</span></td></tr>
-            <tr><td>👑 CURSO DE CIBERSEGURANÇA AVANÇADA</td></tr>
-            <tr><td>👑 CURSO DE PYTHON PARA ANÁLISE DE DADOS</td></tr>
-            <tr><td>👑 CURSO DE SQL E BANCO DE DADOS</td></tr>
-            <tr><td>👑 CURSO DE AWS E CLOUD COMPUTING</td></tr>
-            <tr><td>👑 CURSO DE ROBÓTICA E AUTOMAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE BLOCKCHAIN E CRIPTOMOEDAS</td></tr>
-            <tr><td>👑 CURSO DE METAVERSO E REALIDADE VIRTUAL</td></tr>
-            <tr><td>👑 CURSO DE HARDWARE E MONTAGEM DE PC</td></tr>
-            <tr><td>👑 CURSO DE REDES DE COMPUTADORES</td></tr>
-            <tr><td>👑 CURSO DE LINUX PARA INICIANTES</td></tr>
-            <tr><td>👑 CURSO DE DESENVOLVIMENTO DE APPS</td></tr>
-            <tr><td>👑 CURSO DE GAME DESIGN E JOGOS</td></tr>
+    <div class="section">
+        <div class="title">💻 Tecnologia & Dev</div>
+        <div class="grid">
+            <div class="item"><b>💎</b> Cursos hackers</div> <div class="item"><b>💎</b> Cursos dev</div>
+            <div class="item"><b>💎</b> Python dados</div> <div class="item"><b>💎</b> Sql & Banco</div>
+            <div class="item"><b>💎</b> Aws Cloud</div> <div class="item"><b>💎</b> Game design</div>
+            <div class="item"><b>💎</b> Hardware pc</div> <div class="item"><b>💎</b> Redes comp.</div>
+            <div class="item"><b>💎</b> Linux início</div> <div class="item"><b>💎</b> Ads cursos</div>
+            <div class="item"><b>💎</b> Robótica</div> <div class="item"><b>💎</b> Blockchain</div>
+            <div class="item"><b>💎</b> Metaverso</div> <div class="item"><b>💎</b> Cibersegurança</div>
+        </div>
+    </div>
 
-            <tr class="category-row"><td colspan="2">🏛️ CONCURSOS PÚBLICOS E MILITARES</td></tr>
-            <tr><td>👑 PM DE TODOS OS ESTADOS <span class="vip-badge">HOT</span></td></tr>
-            <tr><td>👑 CARREIRAS MILITARES</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA POLICIAL</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA FISCAL</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA TRIBUNAL</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA BANCÁRIA</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA DE SAÚDE</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA DE EDUCAÇÃO</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA ADMINISTRATIVA</td></tr>
-            <tr><td>👑 CURSO DE DIREITO CONSTITUCIONAL</td></tr>
-            <tr><td>👑 CURSO DE DIREITO ADMINISTRATIVO</td></tr>
-            <tr><td>👑 CURSO DE LEGISLAÇÃO APLICADA</td></tr>
-            <tr><td>👑 CURSO DE PORTUGUÊS PARA CONCURSOS</td></tr>
-            <tr><td>👑 CURSO DE MATEMÁTICA PARA CONCURSOS</td></tr>
-            <tr><td>👑 CURSO DE RACIOCÍNIO LÓGICO</td></tr>
-            <tr><td>👑 CURSO DE INFORMÁTICA PARA CONCURSOS</td></tr>
-            <tr><td>👑 CURSO DE INGLÊS PARA CONCURSOS</td></tr>
+    <div class="section">
+        <div class="title">👮 Concursos & Militar</div>
+        <div class="grid">
+            <div class="item"><b>⚔️</b> PM de todos estados</div> <div class="item"><b>⚔️</b> Carreiras militares</div>
+            <div class="item"><b>⚔️</b> Área policial</div> <div class="item"><b>⚔️</b> Área fiscal</div>
+            <div class="item"><b>⚔️</b> Área tribunal</div> <div class="item"><b>⚔️</b> Área bancária</div>
+            <div class="item"><b>⚔️</b> Área saúde</div> <div class="item"><b>⚔️</b> Área educação</div>
+            <div class="item"><b>⚔️</b> Administrativa</div> <div class="item"><b>⚔️</b> Legislação</div>
+            <div class="item"><b>⚔️</b> Dir. Constitucional</div> <div class="item"><b>⚔️</b> Dir. Administrativo</div>
+            <div class="item"><b>⚔️</b> Raciocínio lógico</div> <div class="item"><b>⚔️</b> Português conc.</div>
+            <div class="item"><b>⚔️</b> Matemática conc.</div> <div class="item"><b>⚔️</b> Informática conc.</div>
+        </div>
+    </div>
 
-            <tr class="category-row"><td colspan="2">💹 FINANÇAS, TRADE E MARKETING</td></tr>
-            <tr><td>👑 MARKETING DIGITAL <span class="vip-badge">TOP</span></td></tr>
-            <tr><td>👑 OPÇÕES BINÁRIAS</td></tr>
-            <tr><td>👑 DAY TRADE</td></tr>
-            <tr><td>👑 FOREX</td></tr>
-            <tr><td>👑 CRIPTOMOEDAS E TRADING</td></tr>
-            <tr><td>👑 FUNDOS IMOBILIÁRIOS</td></tr>
-            <tr><td>👑 TESOURO DIRETO</td></tr>
-            <tr><td>👑 ANÁLISE TÉCNICA AVANÇADA</td></tr>
-            <tr><td>👑 ANÁLISE FUNDAMENTALISTA</td></tr>
-            <tr><td>👑 INVESTIMENTO E AÇÕES</td></tr>
-            <tr><td>👑 EDUCAÇÃO FINANCEIRA PARA JOVENS</td></tr>
-            <tr><td>👑 GESTÃO DE TRÁFEGO PAGO</td></tr>
-            <tr><td>👑 E-COMMERCE E DROPSHIPPING</td></tr>
-            <tr><td>👑 MARKETING DE AFILIADOS</td></tr>
-            <tr><td>👑 COPYWRITING</td></tr>
-            <tr><td>👑 SEO E OTIMIZAÇÃO PARA BUSCAS</td></tr>
-            <tr><td>👑 GOOGLE ADS E FACEBOOK ADS</td></tr>
+    <div class="section">
+        <div class="title">💸 Finanças & Trading</div>
+        <div class="grid">
+            <div class="item"><b>📈</b> Opções binárias</div> <div class="item"><b>📈</b> Day trade</div>
+            <div class="item"><b>📈</b> Marketing digital</div> <div class="item"><b>📈</b> Ações & Bolsa</div>
+            <div class="item"><b>📈</b> Investimentos</div> <div class="item"><b>📈</b> Forex curso</div>
+            <div class="item"><b>📈</b> Fundos imob.</div> <div class="item"><b>📈</b> Tesouro direto</div>
+            <div class="item"><b>📈</b> Cripto trading</div> <div class="item"><b>📈</b> Finanças jovens</div>
+            <div class="item"><b>📈</b> Análise técnica</div> <div class="item"><b>📈</b> Análise fundam.</div>
+            <div class="item"><b>📈</b> Renda passiva</div> <div class="item"><b>📈</b> Sair das dívidas</div>
+        </div>
+    </div>
 
-            <tr class="category-row"><td colspan="2">🛠️ TÉCNICOS E PROFISSIONALIZANTES</td></tr>
-            <tr><td>👑 CURSO DE ELETRICISTA</td></tr>
-            <tr><td>👑 CURSO DE MECÂNICA AUTOMOTIVA</td></tr>
-            <tr><td>👑 CURSO DE MECÂNICA DE MOTOS</td></tr>
-            <tr><td>👑 CURSO DE ENERGIA SOLAR</td></tr>
-            <tr><td>👑 CURSO DE AR-CONDICIONADO E REFRIGERAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE MANUTENÇÃO DE CELULARES</td></tr>
-            <tr><td>👑 CURSO DE MANUTENÇÃO DE NOTEBOOKS</td></tr>
-            <tr><td>👑 CURSO DE MANUTENÇÃO DE ELETRODOMÉSTICOS</td></tr>
-            <tr><td>👑 CURSO DE REFRIGERAÇÃO COMERCIAL</td></tr>
-            <tr><td>👑 CURSO DE SERRALHERIA E SOLDA</td></tr>
-            <tr><td>👑 CURSO DE TORNEIRO MECÂNICO E SOLDADOR</td></tr>
-            <tr><td>👑 CURSO DE MARCENARIA E CARPINTARIA</td></tr>
-            <tr><td>👑 CURSO DE PINTURA RESIDENCIAL</td></tr>
-            <tr><td>👑 CURSO DE ENCANADOR E HIDRÁULICA</td></tr>
-            <tr><td>👑 CURSO DE OPERADOR DE EMPILHADEIRA</td></tr>
-            <tr><td>👑 CURSO DE VIGILANTE E SEGURANÇA</td></tr>
-            <tr><td>👑 CURSO DE CHAVEIRO</td></tr>
+    <div class="section">
+        <div class="title">🛠️ Profissões & Técnicos</div>
+        <div class="grid">
+            <div class="item"><b>🛠️</b> Eletricista</div> <div class="item"><b>🛠️</b> Mecânica auto</div>
+            <div class="item"><b>🛠️</b> Mecânica motos</div> <div class="item"><b>🛠️</b> Refrigeração</div>
+            <div class="item"><b>🛠️</b> Celulares</div> <div class="item"><b>🛠️</b> Notebooks</div>
+            <div class="item"><b>🛠️</b> Energia solar</div> <div class="item"><b>🛠️</b> Barbeiro prof.</div>
+            <div class="item"><b>🛠️</b> Tatuagem</div> <div class="item"><b>🛠️</b> Piercing</div>
+            <div class="item"><b>🛠️</b> Marcenaria</div> <div class="item"><b>🛠️</b> Serralheria</div>
+            <div class="item"><b>🛠️</b> Eletrônica auto</div> <div class="item"><b>🛠️</b> Funilaria</div>
+            <div class="item"><b>🛠️</b> Gesseiro</div> <div class="item"><b>🛠️</b> Pedreiro</div>
+            <div class="item"><b>🛠️</b> Encanador</div> <div class="item"><b>🛠️</b> Pintura res.</div>
+            <div class="item"><b>🛠️</b> Câmeras & Alarme</div> <div class="item"><b>🛠️</b> Manutenção eletro.</div>
+        </div>
+    </div>
 
-            <tr class="category-row"><td colspan="2">💄 ESTÉTICA E SAÚDE</td></tr>
-            <tr><td>👑 CURSOS DE MEDICINA</td></tr>
-            <tr><td>👑 CURSOS DE ENFERMAGEM</td></tr>
-            <tr><td>👑 BARBEIRO PROFISSIONAL</td></tr>
-            <tr><td>👑 MAQUIAGEM PROFISSIONAL</td></tr>
-            <tr><td>👑 MANICURE E PEDICURE</td></tr>
-            <tr><td>👑 DESIGN DE SOBRANCELHAS E CÍLIOS</td></tr>
-            <tr><td>👑 TATUAGEM E PIERCING</td></tr>
-            <tr><td>👑 PSICANÁLISE E FISIOTERAPIA</td></tr>
-            <tr><td>👑 NUTRIÇÃO ESPORTIVA</td></tr>
-            <tr><td>👑 ACADEMIA E MUSCULAÇÃO</td></tr>
-            <tr><td>👑 CALISTENIA</td></tr>
-            <tr><td>👑 PRIMEIROS SOCORROS</td></tr>
+    <div class="section">
+        <div class="title">🎨 Estética & Design</div>
+        <div class="grid">
+            <div class="item"><b>🎨</b> Design gráfico</div> <div class="item"><b>🎨</b> Ux/Ui design</div>
+            <div class="item"><b>🎨</b> Motion design</div> <div class="item"><b>🎨</b> Fotografia</div>
+            <div class="item"><b>🎨</b> Maquiagem</div> <div class="item"><b>🎨</b> Sobrancelhas</div>
+            <div class="item"><b>🎨</b> Manicure</div> <div class="item"><b>🎨</b> Depilação</div>
+            <div class="item"><b>🎨</b> Social media</div> <div class="item"><b>🎨</b> Youtuber</div>
+            <div class="item"><b>🎨</b> Edição vídeo</div> <div class="item"><b>🎨</b> Podcast</div>
+        </div>
+    </div>
 
-            <tr class="category-row"><td colspan="2">🎨 CRIATIVIDADE E DESIGN</td></tr>
-            <tr><td>👑 CURSOS DE DESIGNER</td></tr>
-            <tr><td>👑 UX/UI DESIGN</td></tr>
-            <tr><td>👑 MOTION DESIGN E ANIMAÇÃO 3D</td></tr>
-            <tr><td>👑 FOTOGRAFIA E EDIÇÃO</td></tr>
-            <tr><td>👑 SOCIAL MEDIA E CRIAÇÃO DE CONTEÚDO</td></tr>
-            <tr><td>👑 YOUTUBER E INFLUENCER</td></tr>
-            <tr><td>👑 CURSO DE DJ E MÚSICOS</td></tr>
-            <tr><td>👑 PRODUÇÃO MUSICAL E CANTO</td></tr>
-            <tr><td>👑 CURSOS DE ARTESANATO E COSTURA</td></tr>
-        </tbody>
-    </table>
+    <div class="section">
+        <div class="title">📚 Saúde & Diversos</div>
+        <div class="grid">
+            <div class="item"><b>📖</b> Medicina</div> <div class="item"><b>📖</b> Enfermagem</div>
+            <div class="item"><b>📖</b> Nutrição esp.</div> <div class="item"><b>📖</b> Psicologia</div>
+            <div class="item"><b>📖</b> Idiomas</div> <div class="item"><b>📖</b> Culinária</div>
+            <div class="item"><b>📖</b> Confeitaria</div> <div class="item"><b>📖</b> Música & Dj</div>
+            <div class="item"><b>📖</b> Adestramento</div> <div class="item"><b>📖</b> Academia</div>
+            <div class="item"><b>📖</b> Calistenia</div> <div class="item"><b>📖</b> Artes marciais</div>
+        </div>
+    </div>
+
+    <div class="footer-box">
+        <div class="refs">
+            <div class="ref-card">
+                <div class="icon-red">👥</div>
+                <div class="ref-val">+150</div>
+                <div class="ref-label">Alunos</div>
+            </div>
+            <div class="ref-card">
+                <div class="icon-red">⭐</div>
+                <div class="ref-val">MEGA</div>
+                <div class="ref-label">Drive</div>
+            </div>
+            <div class="ref-card">
+                <div class="icon-red">🎧</div>
+                <div class="ref-val">100%</div>
+                <div class="ref-label">Suporte</div>
+            </div>
+        </div>
+
+        <div class="pix-alert">Acesso imediato via Mega/Drive 🚀</div>
+
+        <div style="font-size: 10px; color: #444; margin-top: 15px;">
+            CONTATO: @vivoDluxo | @ThommasCooper
+        </div>
+    </div>
 </div>
 
 </body>

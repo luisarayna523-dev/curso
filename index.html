@@ -1,84 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZORDIUM7 VIP - CURSOS</title>
     <style>
-        /* DESIGN IDÊNTICO AO DE MÉTODOS */
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #0d0d0d; 
-            color: #ffffff; 
-            margin: 0; 
+        /* CSS IDÊNTICO AO SEU INDEX.HTML */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
             padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .header { 
-            text-align: center; 
+
+        .header {
+            text-align: center;
             padding: 20px 0;
+            width: 100%;
             border-bottom: 2px solid #ff0000;
             margin-bottom: 20px;
             background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
         }
-        .header h1 { 
-            margin: 0; 
-            color: #ff0000; 
-            font-size: 22px;
+
+        .header h1 {
+            margin: 0;
+            color: #ff0000;
+            font-size: 24px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
         }
-        .header p { 
-            margin: 5px 0 0; 
-            font-size: 12px; 
-            color: #888; 
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            background-color: #161616;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        th { 
-            background-color: #ff0000; 
-            color: white; 
-            padding: 12px; 
-            text-align: left; 
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-        td { 
-            padding: 12px; 
-            border-bottom: 1px solid #222; 
+
+        .header p {
+            margin: 5px 0 0;
             font-size: 13px;
+            color: #888;
         }
-        tr:last-child td { border-bottom: none; }
-        tr:nth-child(even) { background-color: #1c1c1c; }
-        
-        /* Badge VIP */
-        .vip-tag {
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #161616;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            border: 1px solid #222;
+        }
+
+        th {
             background-color: #ff0000;
-            color: #fff;
-            padding: 2px 6px;
-            border-radius: 4px;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #222;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        tr:nth-child(even) { background-color: #1c1c1c; }
+        tr:hover { background-color: #252525; }
+
+        /* SEPARADORES DE CATEGORIA */
+        .category-row {
+            background-color: #2a2a2a !important;
+            color: #ff0000;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            border-top: 2px solid #333;
+        }
+
+        .vip-badge {
+            background-color: #ff0000;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
             font-size: 10px;
             font-weight: bold;
             float: right;
-        }
-
-        /* Categorias (Separadores) */
-        .category {
-            background-color: #2a2a2a !important;
-            font-weight: bold;
-            color: #ff0000;
-            text-align: center;
-            font-size: 11px;
-            letter-spacing: 1px;
+            box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
         }
     </style>
 </head>
@@ -87,86 +106,114 @@
 <div class="container">
     <div class="header">
         <h1>EZORDIUM7 VIP</h1>
-        <p>CONCURSOS, MENTORIA E QUALIFICAÇÃO</p>
+        <p>CONCURSOS, MENTORIA E QUALIFICAÇÃO PROFISSIONAL</p>
     </div>
 
     <table>
         <thead>
             <tr>
-                <th>LISTA DE CURSOS DISPONÍVEIS</th>
+                <th>CONTEÚDO COMPLETO DISPONÍVEL</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="category"><td>MASTER & TECNOLOGIA</td></tr>
-            <tr><td>👑 CURSOS HACKERS <span class="vip-tag">VIP</span></td></tr>
-            <tr><td>👑 CURSOS DEV <span class="vip-tag">VIP</span></td></tr>
-            <tr><td>👑 CURSO DE INTELIGÊNCIA ARTIFICIAL <span class="vip-tag">NEW</span></td></tr>
-            <tr><td>👑 CURSO DE UX/UI DESIGN</td></tr>
+            <tr class="category-row"><td colspan="2">💻 TECNOLOGIA E HACKING</td></tr>
+            <tr><td>👑 CURSOS HACKERS <span class="vip-badge">VIP</span></td></tr>
+            <tr><td>👑 CURSOS DEV <span class="vip-badge">VIP</span></td></tr>
+            <tr><td>👑 CURSO DE INTELIGÊNCIA ARTIFICIAL <span class="vip-badge">NOVO</span></td></tr>
+            <tr><td>👑 CURSO DE CIBERSEGURANÇA AVANÇADA</td></tr>
+            <tr><td>👑 CURSO DE PYTHON PARA ANÁLISE DE DADOS</td></tr>
+            <tr><td>👑 CURSO DE SQL E BANCO DE DADOS</td></tr>
+            <tr><td>👑 CURSO DE AWS E CLOUD COMPUTING</td></tr>
+            <tr><td>👑 CURSO DE ROBÓTICA E AUTOMAÇÃO</td></tr>
+            <tr><td>👑 CURSO DE BLOCKCHAIN E CRIPTOMOEDAS</td></tr>
+            <tr><td>👑 CURSO DE METAVERSO E REALIDADE VIRTUAL</td></tr>
+            <tr><td>👑 CURSO DE HARDWARE E MONTAGEM DE PC</td></tr>
+            <tr><td>👑 CURSO DE REDES DE COMPUTADORES</td></tr>
+            <tr><td>👑 CURSO DE LINUX PARA INICIANTES</td></tr>
             <tr><td>👑 CURSO DE DESENVOLVIMENTO DE APPS</td></tr>
-            <tr><td>👑 PYTHON PARA ANÁLISE DE DADOS</td></tr>
-            <tr><td>👑 SQL E BANCO DE DADOS</td></tr>
-            <tr><td>👑 AWS E CLOUD COMPUTING</td></tr>
-            <tr><td>👑 GAME DESIGN E JOGOS</td></tr>
-            <tr><td>👑 HARDWARE E MONTAGEM DE PC</td></tr>
-            <tr><td>👑 CIBERSEGURANÇA AVANÇADA</td></tr>
-            
-            <tr class="category"><td>CONCURSOS PÚBLICOS</td></tr>
-            <tr><td>👑 PM DE TODOS OS ESTADOS <span class="vip-tag">HOT</span></td></tr>
+            <tr><td>👑 CURSO DE GAME DESIGN E JOGOS</td></tr>
+
+            <tr class="category-row"><td colspan="2">🏛️ CONCURSOS PÚBLICOS E MILITARES</td></tr>
+            <tr><td>👑 PM DE TODOS OS ESTADOS <span class="vip-badge">HOT</span></td></tr>
             <tr><td>👑 CARREIRAS MILITARES</td></tr>
-            <tr><td>👑 PORTUGUÊS PARA CONCURSOS</td></tr>
-            <tr><td>👑 MATEMÁTICA PARA CONCURSOS</td></tr>
-            <tr><td>👑 RACIOCÍNIO LÓGICO</td></tr>
-            <tr><td>👑 DIREITO CONSTITUCIONAL</td></tr>
-            <tr><td>👑 DIREITO ADMINISTRATIVO</td></tr>
-            <tr><td>👑 CONCURSOS ÁREA POLICIAL</td></tr>
-            <tr><td>👑 CONCURSOS ÁREA FISCAL</td></tr>
-            <tr><td>👑 CONCURSOS ÁREA TRIBUNAL</td></tr>
-            
-            <tr class="category"><td>FINANÇAS E TRADING</td></tr>
+            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA POLICIAL</td></tr>
+            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA FISCAL</td></tr>
+            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA TRIBUNAL</td></tr>
+            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA BANCÁRIA</td></tr>
+            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA DE SAÚDE</td></tr>
+            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA DE EDUCAÇÃO</td></tr>
+            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA ADMINISTRATIVA</td></tr>
+            <tr><td>👑 CURSO DE DIREITO CONSTITUCIONAL</td></tr>
+            <tr><td>👑 CURSO DE DIREITO ADMINISTRATIVO</td></tr>
+            <tr><td>👑 CURSO DE LEGISLAÇÃO APLICADA</td></tr>
+            <tr><td>👑 CURSO DE PORTUGUÊS PARA CONCURSOS</td></tr>
+            <tr><td>👑 CURSO DE MATEMÁTICA PARA CONCURSOS</td></tr>
+            <tr><td>👑 CURSO DE RACIOCÍNIO LÓGICO</td></tr>
+            <tr><td>👑 CURSO DE INFORMÁTICA PARA CONCURSOS</td></tr>
+            <tr><td>👑 CURSO DE INGLÊS PARA CONCURSOS</td></tr>
+
+            <tr class="category-row"><td colspan="2">💹 FINANÇAS, TRADE E MARKETING</td></tr>
+            <tr><td>👑 MARKETING DIGITAL <span class="vip-badge">TOP</span></td></tr>
             <tr><td>👑 OPÇÕES BINÁRIAS</td></tr>
-            <tr><td>👑 DAY TRADE <span class="vip-tag">VIP</span></td></tr>
+            <tr><td>👑 DAY TRADE</td></tr>
             <tr><td>👑 FOREX</td></tr>
             <tr><td>👑 CRIPTOMOEDAS E TRADING</td></tr>
             <tr><td>👑 FUNDOS IMOBILIÁRIOS</td></tr>
+            <tr><td>👑 TESOURO DIRETO</td></tr>
             <tr><td>👑 ANÁLISE TÉCNICA AVANÇADA</td></tr>
+            <tr><td>👑 ANÁLISE FUNDAMENTALISTA</td></tr>
             <tr><td>👑 INVESTIMENTO E AÇÕES</td></tr>
-            
-            <tr class="category"><td>PROFISSÕES E TÉCNICOS</td></tr>
+            <tr><td>👑 EDUCAÇÃO FINANCEIRA PARA JOVENS</td></tr>
+            <tr><td>👑 GESTÃO DE TRÁFEGO PAGO</td></tr>
+            <tr><td>👑 E-COMMERCE E DROPSHIPPING</td></tr>
+            <tr><td>👑 MARKETING DE AFILIADOS</td></tr>
+            <tr><td>👑 COPYWRITING</td></tr>
+            <tr><td>👑 SEO E OTIMIZAÇÃO PARA BUSCAS</td></tr>
+            <tr><td>👑 GOOGLE ADS E FACEBOOK ADS</td></tr>
+
+            <tr class="category-row"><td colspan="2">🛠️ TÉCNICOS E PROFISSIONALIZANTES</td></tr>
             <tr><td>👑 CURSO DE ELETRICISTA</td></tr>
-            <tr><td>👑 MECÂNICA AUTOMOTIVA</td></tr>
-            <tr><td>👑 ENERGIA SOLAR</td></tr>
-            <tr><td>👑 AR-CONDICIONADO E REFRIGERAÇÃO</td></tr>
-            <tr><td>👑 MANUTENÇÃO DE CELULARES</td></tr>
-            <tr><td>👑 MANUTENÇÃO DE NOTEBOOKS</td></tr>
+            <tr><td>👑 CURSO DE MECÂNICA AUTOMOTIVA</td></tr>
+            <tr><td>👑 CURSO DE MECÂNICA DE MOTOS</td></tr>
+            <tr><td>👑 CURSO DE ENERGIA SOLAR</td></tr>
+            <tr><td>👑 CURSO DE AR-CONDICIONADO E REFRIGERAÇÃO</td></tr>
+            <tr><td>👑 CURSO DE MANUTENÇÃO DE CELULARES</td></tr>
+            <tr><td>👑 CURSO DE MANUTENÇÃO DE NOTEBOOKS</td></tr>
+            <tr><td>👑 CURSO DE MANUTENÇÃO DE ELETRODOMÉSTICOS</td></tr>
+            <tr><td>👑 CURSO DE REFRIGERAÇÃO COMERCIAL</td></tr>
+            <tr><td>👑 CURSO DE SERRALHERIA E SOLDA</td></tr>
+            <tr><td>👑 CURSO DE TORNEIRO MECÂNICO E SOLDADOR</td></tr>
+            <tr><td>👑 CURSO DE MARCENARIA E CARPINTARIA</td></tr>
+            <tr><td>👑 CURSO DE PINTURA RESIDENCIAL</td></tr>
+            <tr><td>👑 CURSO DE ENCANADOR E HIDRÁULICA</td></tr>
+            <tr><td>👑 CURSO DE OPERADOR DE EMPILHADEIRA</td></tr>
+            <tr><td>👑 CURSO DE VIGILANTE E SEGURANÇA</td></tr>
+            <tr><td>👑 CURSO DE CHAVEIRO</td></tr>
+
+            <tr class="category-row"><td colspan="2">💄 ESTÉTICA E SAÚDE</td></tr>
+            <tr><td>👑 CURSOS DE MEDICINA</td></tr>
+            <tr><td>👑 CURSOS DE ENFERMAGEM</td></tr>
             <tr><td>👑 BARBEIRO PROFISSIONAL</td></tr>
             <tr><td>👑 MAQUIAGEM PROFISSIONAL</td></tr>
+            <tr><td>👑 MANICURE E PEDICURE</td></tr>
+            <tr><td>👑 DESIGN DE SOBRANCELHAS E CÍLIOS</td></tr>
             <tr><td>👑 TATUAGEM E PIERCING</td></tr>
-            <tr><td>👑 MARCENARIA E CARPINTARIA</td></tr>
-            <tr><td>👑 SERRALHERIA E SOLDA</td></tr>
-            
-            <tr class="category"><td>MARKETING E DIGITAL</td></tr>
-            <tr><td>👑 MARKETING DIGITAL <span class="vip-tag">TOP</span></td></tr>
-            <tr><td>👑 GESTÃO DE TRÁFEGO PAGO</td></tr>
-            <tr><td>👑 SOCIAL MEDIA E CONTEÚDO</td></tr>
-            <tr><td>👑 MOTION DESIGN E 3D</td></tr>
-            <tr><td>👑 CURSOS DE YOUTUBER</td></tr>
-            <tr><td>👑 CURSOS DE INFLUENCER</td></tr>
-            <tr><td>👑 COPYWRITING</td></tr>
-            
-            <tr class="category"><td>SAÚDE E BEM-ESTAR</td></tr>
-            <tr><td>👑 CURSOS DE MEDICINA</td></tr>
-            <tr><td>👑 ENFERMAGEM E SAÚDE</td></tr>
+            <tr><td>👑 PSICANÁLISE E FISIOTERAPIA</td></tr>
             <tr><td>👑 NUTRIÇÃO ESPORTIVA</td></tr>
-            <tr><td>👑 PSICOLOGIA E DESENVOLVIMENTO</td></tr>
+            <tr><td>👑 ACADEMIA E MUSCULAÇÃO</td></tr>
+            <tr><td>👑 CALISTENIA</td></tr>
             <tr><td>👑 PRIMEIROS SOCORROS</td></tr>
-            <tr><td>👑 ACADEMIA E CALISTENIA</td></tr>
-            
-            <tr class="category"><td>OUTROS SEGMENTOS</td></tr>
-            <tr><td>👑 IDIOMAS (INGLÊS, ESPANHOL, ETC)</td></tr>
-            <tr><td>👑 CULINÁRIA E CONFEITARIA</td></tr>
-            <tr><td>👑 MÚSICA, DJ E PRODUÇÃO</td></tr>
+
+            <tr class="category-row"><td colspan="2">🎨 CRIATIVIDADE E DESIGN</td></tr>
+            <tr><td>👑 CURSOS DE DESIGNER</td></tr>
+            <tr><td>👑 UX/UI DESIGN</td></tr>
+            <tr><td>👑 MOTION DESIGN E ANIMAÇÃO 3D</td></tr>
             <tr><td>👑 FOTOGRAFIA E EDIÇÃO</td></tr>
-            <tr><td>👑 ADESTRAMENTO DE CÃES</td></tr>
+            <tr><td>👑 SOCIAL MEDIA E CRIAÇÃO DE CONTEÚDO</td></tr>
+            <tr><td>👑 YOUTUBER E INFLUENCER</td></tr>
+            <tr><td>👑 CURSO DE DJ E MÚSICOS</td></tr>
+            <tr><td>👑 PRODUÇÃO MUSICAL E CANTO</td></tr>
+            <tr><td>👑 CURSOS DE ARTESANATO E COSTURA</td></tr>
         </tbody>
     </table>
 </div>

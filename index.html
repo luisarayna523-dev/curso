@@ -5,267 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZORDIUM7 VIP - CURSOS</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #000; color: #fff; margin: 0; padding: 20px; }
-        .header { text-align: center; border-bottom: 2px solid #ff0000; padding-bottom: 10px; margin-bottom: 20px; }
-        .header h1 { color: #ff0000; margin: 0; font-size: 24px; }
-        .header p { color: #ccc; font-size: 14px; }
-        table { width: 100%; border-collapse: collapse; background: #111; border-radius: 8px; overflow: hidden; }
-        th { background-color: #ff0000; color: white; padding: 12px; text-align: left; text-transform: uppercase; font-size: 13px; }
-        td { padding: 10px 12px; border-bottom: 1px solid #222; font-size: 14px; color: #eee; }
-        tr:nth-child(even) { background-color: #1a1a1a; }
-        tr:hover { background-color: #252525; }
-        .emoji { margin-right: 10px; }
-        .category-title { background: #333 !important; font-weight: bold; color: #ff0000; text-align: center; font-size: 15px; }
+        /* DESIGN IDÊNTICO AO DE MÉTODOS */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #0d0d0d; 
+            color: #ffffff; 
+            margin: 0; 
+            padding: 15px;
+        }
+        .header { 
+            text-align: center; 
+            padding: 20px 0;
+            border-bottom: 2px solid #ff0000;
+            margin-bottom: 20px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+        }
+        .header h1 { 
+            margin: 0; 
+            color: #ff0000; 
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .header p { 
+            margin: 5px 0 0; 
+            font-size: 12px; 
+            color: #888; 
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            background-color: #161616;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        th { 
+            background-color: #ff0000; 
+            color: white; 
+            padding: 12px; 
+            text-align: left; 
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        td { 
+            padding: 12px; 
+            border-bottom: 1px solid #222; 
+            font-size: 13px;
+        }
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) { background-color: #1c1c1c; }
+        
+        /* Badge VIP */
+        .vip-tag {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            float: right;
+        }
+
+        /* Categorias (Separadores) */
+        .category {
+            background-color: #2a2a2a !important;
+            font-weight: bold;
+            color: #ff0000;
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
 
+<div class="container">
     <div class="header">
-        <h1>EZORDIUM7 VIP - CURSOS</h1>
-        <p>CONCURSOS, MENTORIAS E QUALIFICAÇÃO PROFISSIONAL</p>
+        <h1>EZORDIUM7 VIP</h1>
+        <p>CONCURSOS, MENTORIA E QUALIFICAÇÃO</p>
     </div>
 
     <table>
         <thead>
             <tr>
-                <th>Conteúdo Disponível</th>
+                <th>LISTA DE CURSOS DISPONÍVEIS</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="category-title"><td>PRINCIPAIS E TECNOLOGIA</td></tr>
-            <tr><td>👑 CURSOS HACKERS</td></tr>
-            <tr><td>👑 CURSOS DEV</td></tr>
-            <tr><td>👑 PM DE TODOS OS ESTADOS</td></tr>
-            <tr><td>👑 MARKETING DIGITAL</td></tr>
-            <tr><td>👑 OPÇÕES BINÁRIAS</td></tr>
-            <tr><td>👑 CURSOS DE MEDICINA</td></tr>
-            <tr><td>👑 DAY TRADE</td></tr>
-            <tr><td>👑 CURSO DE EXCEL AVANÇADO</td></tr>
-            <tr><td>👑 CURSO DE INTELIGÊNCIA ARTIFICIAL</td></tr>
+            <tr class="category"><td>MASTER & TECNOLOGIA</td></tr>
+            <tr><td>👑 CURSOS HACKERS <span class="vip-tag">VIP</span></td></tr>
+            <tr><td>👑 CURSOS DEV <span class="vip-tag">VIP</span></td></tr>
+            <tr><td>👑 CURSO DE INTELIGÊNCIA ARTIFICIAL <span class="vip-tag">NEW</span></td></tr>
             <tr><td>👑 CURSO DE UX/UI DESIGN</td></tr>
             <tr><td>👑 CURSO DE DESENVOLVIMENTO DE APPS</td></tr>
-            <tr><td>👑 CURSO DE PYTHON PARA ANÁLISE DE DADOS</td></tr>
-            <tr><td>👑 CURSO DE SQL E BANCO DE DADOS</td></tr>
-            <tr><td>👑 CURSO DE AWS E CLOUD COMPUTING</td></tr>
-            <tr><td>👑 CURSO DE GAME DESIGN E DESENVOLVIMENTO DE JOGOS</td></tr>
-            <tr><td>👑 CURSO DE HARDWARE E MONTAGEM DE PC</td></tr>
-            <tr><td>👑 CURSO DE REDES DE COMPUTADORES</td></tr>
-            <tr><td>👑 CURSO DE LINUX PARA INICIANTES</td></tr>
-            <tr><td>👑 CURSO DE POWER BI E BUSINESS INTELLIGENCE</td></tr>
-            <tr class="category-title"><td>CONCURSOS PÚBLICOS</td></tr>
+            <tr><td>👑 PYTHON PARA ANÁLISE DE DADOS</td></tr>
+            <tr><td>👑 SQL E BANCO DE DADOS</td></tr>
+            <tr><td>👑 AWS E CLOUD COMPUTING</td></tr>
+            <tr><td>👑 GAME DESIGN E JOGOS</td></tr>
+            <tr><td>👑 HARDWARE E MONTAGEM DE PC</td></tr>
+            <tr><td>👑 CIBERSEGURANÇA AVANÇADA</td></tr>
+            
+            <tr class="category"><td>CONCURSOS PÚBLICOS</td></tr>
+            <tr><td>👑 PM DE TODOS OS ESTADOS <span class="vip-tag">HOT</span></td></tr>
             <tr><td>👑 CARREIRAS MILITARES</td></tr>
-            <tr><td>👑 CURSO DE INGLÊS PARA CONCURSOS</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA FISCAL</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA POLICIAL</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA TRIBUNAL</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA BANCÁRIA</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA DE SAÚDE</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA DE EDUCAÇÃO</td></tr>
-            <tr><td>👑 CURSO PARA CONCURSOS DA ÁREA ADMINISTRATIVA</td></tr>
-            <tr><td>👑 CURSO DE LEGISLAÇÃO APLICADA</td></tr>
-            <tr><td>👑 CURSO DE DIREITO CONSTITUCIONAL</td></tr>
-            <tr><td>👑 CURSO DE DIREITO ADMINISTRAIVO</td></tr>
-            <tr><td>👑 CURSO DE RACIOCÍNIO LÓGICO</td></tr>
-            <tr><td>👑 CURSO DE PORTUGUÊS PARA CONCURSOS</td></tr>
-            <tr><td>👑 CURSO DE MATEMÁTICA PARA CONCURSOS</td></tr>
-            <tr><td>👑 CURSO DE INFORMÁTICA PARA CONCURSOS</td></tr>
-            <tr class="category-title"><td>PROFISSIONALIZANTES E TÉCNICOS</td></tr>
-            <tr><td>👑 CURSOS DE CULINARIA</td></tr>
-            <tr><td>👑 CURSO DE COSTURA</td></tr>
+            <tr><td>👑 PORTUGUÊS PARA CONCURSOS</td></tr>
+            <tr><td>👑 MATEMÁTICA PARA CONCURSOS</td></tr>
+            <tr><td>👑 RACIOCÍNIO LÓGICO</td></tr>
+            <tr><td>👑 DIREITO CONSTITUCIONAL</td></tr>
+            <tr><td>👑 DIREITO ADMINISTRATIVO</td></tr>
+            <tr><td>👑 CONCURSOS ÁREA POLICIAL</td></tr>
+            <tr><td>👑 CONCURSOS ÁREA FISCAL</td></tr>
+            <tr><td>👑 CONCURSOS ÁREA TRIBUNAL</td></tr>
+            
+            <tr class="category"><td>FINANÇAS E TRADING</td></tr>
+            <tr><td>👑 OPÇÕES BINÁRIAS</td></tr>
+            <tr><td>👑 DAY TRADE <span class="vip-tag">VIP</span></td></tr>
+            <tr><td>👑 FOREX</td></tr>
+            <tr><td>👑 CRIPTOMOEDAS E TRADING</td></tr>
+            <tr><td>👑 FUNDOS IMOBILIÁRIOS</td></tr>
+            <tr><td>👑 ANÁLISE TÉCNICA AVANÇADA</td></tr>
+            <tr><td>👑 INVESTIMENTO E AÇÕES</td></tr>
+            
+            <tr class="category"><td>PROFISSÕES E TÉCNICOS</td></tr>
             <tr><td>👑 CURSO DE ELETRICISTA</td></tr>
-            <tr><td>👑 CURSOS DE ENGENHEIRO</td></tr>
-            <tr><td>👑 CURSOS DE DESIGNER</td></tr>
-            <tr><td>👑 CURSOS DE ARTESANATO</td></tr>
-            <tr><td>👑 CURSOS DE ENFERMAGEM</td></tr>
-            <tr><td>👑 CURSOS DE DANÇA</td></tr>
-            <tr><td>👑 CURSOS DE IDIOMAS</td></tr>
-            <tr><td>👑 CURSOS DE DJ</td></tr>
-            <tr><td>👑 CURSOS DE MASSAGEM</td></tr>
-            <tr><td>👑 CURSOS DE INVESTIMENTO</td></tr>
-            <tr><td>👑 CURSOS DE AÇÕES</td></tr>
-            <tr><td>👑 CURSOS ARTISTAS</td></tr>
-            <tr><td>👑 CURSO DE TELEMARKETING</td></tr>
-            <tr><td>👑 CURSOS DE CHAVEIRO</td></tr>
-            <tr><td>👑 CURSO DE MOTORISTA</td></tr>
-            <tr><td>👑 CURSO DE MÚSICOS</td></tr>
-            <tr><td>👑 CURSO DE ENERGIA SOLAR</td></tr>
+            <tr><td>👑 MECÂNICA AUTOMOTIVA</td></tr>
+            <tr><td>👑 ENERGIA SOLAR</td></tr>
+            <tr><td>👑 AR-CONDICIONADO E REFRIGERAÇÃO</td></tr>
+            <tr><td>👑 MANUTENÇÃO DE CELULARES</td></tr>
+            <tr><td>👑 MANUTENÇÃO DE NOTEBOOKS</td></tr>
+            <tr><td>👑 BARBEIRO PROFISSIONAL</td></tr>
+            <tr><td>👑 MAQUIAGEM PROFISSIONAL</td></tr>
+            <tr><td>👑 TATUAGEM E PIERCING</td></tr>
+            <tr><td>👑 MARCENARIA E CARPINTARIA</td></tr>
+            <tr><td>👑 SERRALHERIA E SOLDA</td></tr>
+            
+            <tr class="category"><td>MARKETING E DIGITAL</td></tr>
+            <tr><td>👑 MARKETING DIGITAL <span class="vip-tag">TOP</span></td></tr>
+            <tr><td>👑 GESTÃO DE TRÁFEGO PAGO</td></tr>
+            <tr><td>👑 SOCIAL MEDIA E CONTEÚDO</td></tr>
+            <tr><td>👑 MOTION DESIGN E 3D</td></tr>
             <tr><td>👑 CURSOS DE YOUTUBER</td></tr>
             <tr><td>👑 CURSOS DE INFLUENCER</td></tr>
-            <tr><td>👑 CURSO DE ARTES MACIAIS</td></tr>
-            <tr><td>👑 CURSOS DE ADS</td></tr>
-            <tr><td>👑 CURSOS DE HISTORIAS</td></tr>
-            <tr><td>👑 CURSOS DE ACADEMIA</td></tr>
-            <tr><td>👑 CURSOS DE CALISTENIA</td></tr>
-            <tr><td>👑 CURSO DE FOTOGRAFIA E EDIÇÃO</td></tr>
-            <tr><td>👑 CURSO DE VENDAS E NEGOCIAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE MECÂNICA AUTOMOTIVA</td></tr>
-            <tr><td>👑 CURSO DE GESTÃO DE TRÁFEGO PAGO</td></tr>
-            <tr><td>👑 CURSO DE FITOTERAPIA E ERVAS MEDICINAIS</td></tr>
-            <tr><td>👑 CURSO DE PSICOLOGIA E DESENVOLVIMENTO PESSOAL</td></tr>
-            <tr><td>👑 CURSO DE NUTRIÇÃO ESPORTIVA</td></tr>
-            <tr><td>👑 CURSO DE PRIMEIROS SOCORROS</td></tr>
-            <tr><td>👑 CURSO DE COMO ABRIR MEI E FORMALIZAR NEGÓCIO</td></tr>
-            <tr><td>👑 CURSO DE E-COMMERCE E DROPSHIPPING</td></tr>
-            <tr><td>👑 CURSO DE FRANQUIAS E MODELOS DE NEGÓCIO</td></tr>
-            <tr><td>👑 CURSO DE ROBÓTICA E AUTOMAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE BLOCKCHAIN E CRIPTOMOEDAS</td></tr>
-            <tr><td>👑 CURSO DE METAVERSO E REALIDADE VIRTUAL</td></tr>
-            <tr><td>👑 CURSO DE CIBERSEGURANÇA AVANÇADA</td></tr>
-            <tr><td>👑 CURSO DE MOTION DESIGN E ANIMAÇÃO 3D</td></tr>
-            <tr><td>👑 CURSO DE SOCIAL MEDIA E CRIAÇÃO DE CONTEÚDO</td></tr>
-            <tr><td>👑 CURSO DE PODCAST E ROTEIRIZAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE ORATÓRIA E COMUNICAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE INTELIGÊNCIA EMOCIONAL</td></tr>
-            <tr><td>👑 CURSO DE MEMORIZAÇÃO E LEITURA DINÂMICA</td></tr>
-            <tr><td>👑 CURSO DE AR-CONDICIONADO E REFRIGERAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE PINTURA RESIDENCIAL E ACABAMENTO</td></tr>
-            <tr><td>👑 CURSO DE SERRALHERIA E SOLDA</td></tr>
-            <tr><td>👑 CURSO DE ADESTRAMENTO DE CÃES</td></tr>
-            <tr><td>👑 CURSO DE MANICURE E PEDICURE</td></tr>
-            <tr><td>👑 CURSO DE BARBEIRO PROFISSIONAL</td></tr>
-            <tr><td>👑 CURSO DE MAQUIAGEM PROFISSIONAL</td></tr>
-            <tr><td>👑 CURSO DE FOREX</td></tr>
-            <tr><td>👑 CURSO DE FUNDOS IMOBILIÁRIOS</td></tr>
-            <tr><td>👑 CURSO DE TESOURO DIRETO</td></tr>
-            <tr><td>👑 CURSO DE CRIPTOMOEDAS E TRADING</td></tr>
-            <tr><td>👑 CURSO DE FINANÇAS PESSOAIS</td></tr>
-            <tr><td>👑 CURSO DE EDUCAÇÃO FINANCEIRA PARA JOVENS</td></tr>
-            <tr><td>👑 CURSO DE ANÁLISE TÉCNICA AVANÇADA</td></tr>
-            <tr><td>👑 CURSO DE ANÁLISE FUNDAMENTALISTA</td></tr>
-            <tr><td>👑 CURSO DE RENDA PASSIVA E DIVIDENDOS</td></tr>
-            <tr><td>👑 CURSO DE COMO SAIR DAS DÍVIDAS</td></tr>
-            <tr><td>👑 CURSO DE CONTROLADORIA E FINANÇAS</td></tr>
-            <tr><td>👑 CURSO DE PSICANÁLISE CLÍNICA</td></tr>
-            <tr><td>👑 CURSO DE FISIOTERAPIA E REABILITAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE FARMÁCIA E MANIPULAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE BIOMEDICINA ESTÉTICA</td></tr>
-            <tr><td>👑 CURSO DE ESTÉTICA E COSMETOLOGIA</td></tr>
-            <tr><td>👑 CURSO DE PODOLOGIA</td></tr>
-            <tr><td>👑 CURSO DE ACUPUNTURA</td></tr>
-            <tr><td>👑 CURSO DE YOGA E MEDITAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE PILATES</td></tr>
-            <tr><td>👑 CURSO DE PERSONAL TRAINER</td></tr>
-            <tr><td>👑 CURSO DE GERONTOLOGIA E CUIDADOS COM IDOSOS</td></tr>
-            <tr><td>👑 CURSO DE CUIDADOS COM BEBÊS E AMAMENTAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE AUXILIAR DE SAÚDE BUCAL</td></tr>
-            <tr><td>👑 CURSO DE ENCANADOR E HIDRÁULICA</td></tr>
-            <tr><td>👑 CURSO DE GESSEIRO E FORRO DE GESSO</td></tr>
-            <tr><td>👑 CURSO DE MARCENARIA E CARPINTARIA</td></tr>
-            <tr><td>👑 CURSO DE PEDREIRO E ALVENARIA</td></tr>
-            <tr><td>👑 CURSO DE REVESTIMENTO CERÂMICO</td></tr>
-            <tr><td>👑 CURSO DE INSTALAÇÃO DE CÂMERAS E ALARMES</td></tr>
-            <tr><td>👑 CURSO DE INSTALAÇÃO DE REDES ELÉTRICAS</td></tr>
-            <tr><td>👑 CURSO DE MANUTENÇÃO DE CELULARES</td></tr>
-            <tr><td>👑 CURSO DE MANUTENÇÃO DE NOTEBOOKS</td></tr>
-            <tr><td>👑 CURSO DE MANUTENÇÃO DE ELETRODOMÉSTICOS</td></tr>
-            <tr><td>👑 CURSO DE REFRIGERAÇÃO COMERCIAL</td></tr>
-            <tr><td>👑 CURSO DE CALDEIRARIA</td></tr>
-            <tr><td>👑 CURSO DE TORNEIRO MECÂNICO</td></tr>
-            <tr><td>👑 CURSO DE SOLDADOR INDUSTRIAL</td></tr>
-            <tr><td>👑 CURSO DE DESIGN DE SOBRANCELHAS</td></tr>
-            <tr><td>👑 CURSO DE EXTENSÃO DE CILIOS</td></tr>
-            <tr><td>👑 CURSO DE CABELEREIRO PROFISSIONAL</td></tr>
-            <tr><td>👑 CURSO DE DEPILAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE TATUAGEM</td></tr>
-            <tr><td>👑 CURSO DE PIERCING</td></tr>
-            <tr><td>👑 CURSO DE FLORICULTURA E ARRANJOS FLORAIS</td></tr>
-            <tr><td>👑 CURSO DE DECORAÇÃO DE FESTAS E EVENTOS</td></tr>
-            <tr><td>👑 CURSO DE DOCES E CONFEITARIA</td></tr>
-            <tr><td>👑 CURSO DE PÃES ARTESANAIS</td></tr>
-            <tr><td>👑 CURSO DE CERVEJA ARTESANAL</td></tr>
-            <tr><td>👑 CURSO DE VINHOS E SOMMELIER</td></tr>
-            <tr><td>👑 CURSO DE JOALHERIA E BIJUTERIA</td></tr>
-            <tr><td>👑 CURSO DE PINTURA EM TELA</td></tr>
-            <tr><td>👑 CURSO DE DESENHO ARTÍSTICO</td></tr>
-            <tr><td>👑 CURSO DE CALIGRAFIA E LETTERING</td></tr>
-            <tr><td>👑 CURSO DE SCRAPBOOK</td></tr>
-            <tr><td>👑 CURSO DE BORDADO E CROCHÊ</td></tr>
-            <tr><td>👑 CURSO DE TRICÔ</td></tr>
-            <tr><td>👑 CURSO DE CANTO E TÉCNICA VOCAL</td></tr>
-            <tr><td>👑 CURSO DE VIOLÃO E GUITARRA</td></tr>
-            <tr><td>👑 CURSO DE TECLADO E PIANO</td></tr>
-            <tr><td>👑 CURSO DE BATERIA</td></tr>
-            <tr><td>👑 CURSO DE PRODUÇÃO MUSICAL</td></tr>
-            <tr><td>👑 CURSO DE TEORIA MUSICAL</td></tr>
-            <tr><td>👑 CURSO DE AUDIOVISUAL E FILMAGEM</td></tr>
-            <tr><td>👑 CURSO DE ATUAÇÃO E TEATRO</td></tr>
-            <tr><td>👑 CURSO DE HUMOR E COMÉDIA</td></tr>
-            <tr><td>👑 CURSO DE MAGIA E ILUSIONISMO</td></tr>
-            <tr><td>👑 CURSO DE MARKETING DE AFILIADOS</td></tr>
-            <tr><td>👑 CURSO DE COPYWRITING</td></tr>
-            <tr><td>👑 CURSO DE SEO E OTIMIZAÇÃO PARA BUSCAS</td></tr>
-            <tr><td>👑 CURSO DE GOOGLE ADS</td></tr>
-            <tr><td>👑 CURSO DE FACEBOOK ADS</td></tr>
-            <tr><td>👑 CURSO DE WHATSAPP BUSINESS</td></tr>
-            <tr><td>👑 CURSO DE EMPREENDEDORISMO DIGITAL</td></tr>
-            <tr><td>👑 CURSO DE LIDERANÇA E GESTÃO DE EQUIPES</td></tr>
-            <tr><td>👑 CURSO DE RECURSOS HUMANOS</td></tr>
-            <tr><td>👑 CURSO DE ADMINISTRAÇÃO DE EMPRESAS</td></tr>
-            <tr><td>👑 CURSO DE LOGÍSTICA E SUPPLY CHAIN</td></tr>
-            <tr><td>👑 CURSO DE ESPANHOL</td></tr>
-            <tr><td>👑 CURSO DE LIBRAS</td></tr>
-            <tr><td>👑 CURSO DE FRANCÊS</td></tr>
-            <tr><td>👑 CURSO DE ALEMÃO</td></tr>
-            <tr><td>👑 CURSO DE ITALIANO</td></tr>
-            <tr><td>👑 CURSO DE MANDARIM</td></tr>
-            <tr><td>👑 CURSO DE JAPONÊS</td></tr>
-            <tr><td>👑 CURSO DE REDAÇÃO E ESCRITA CRIATIVA</td></tr>
-            <tr><td>👑 CURSO DE PRODUÇÃO TEXTUAL</td></tr>
-            <tr><td>👑 CURSO DE MEDITAÇÃO MINDFULNESS</td></tr>
-            <tr><td>👑 CURSO DE TREINAMENTO FUNCIONAL</td></tr>
-            <tr><td>👑 CURSO DE MUSCULAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE NATAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE CAPOEIRA</td></tr>
-            <tr><td>👑 CURSO DE JIU-JITSU</td></tr>
-            <tr><td>👑 CURSO DE MUAY THAI</td></tr>
-            <tr><td>👑 CURSO DE BOXE</td></tr>
-            <tr><td>👑 CURSO DE KRAV MAGA</td></tr>
-            <tr><td>👑 CURSO DE AUTODEFESA</td></tr>
-            <tr><td>👑 CURSO DE COACHING E MENTORIA</td></tr>
-            <tr><td>👑 CURSO DE NEUROLINGUÍSTICA</td></tr>
-            <tr><td>👑 CURSO DE PRODUTIVIDADE E GESTÃO DE TEMPO</td></tr>
-            <tr><td>👑 CURSO DE AUTOESTIMA E AUTOCONFIANÇA</td></tr>
-            <tr><td>👑 CURSO DE FILOSOFIA</td></tr>
-            <tr><td>👑 CURSO DE SOCIOLOGIA</td></tr>
-            <tr><td>👑 CURSO DE ANTROPOLOGIA</td></tr>
-            <tr><td>👑 CURSO DE GEOGRAFIA</td></tr>
-            <tr><td>👑 CURSO DE PEDAGOGIA E DOCÊNCIA</td></tr>
-            <tr><td>👑 CURSO DE EDUCAÇÃO INFANTIL</td></tr>
-            <tr><td>👑 CURSO DE EDUCAÇÃO ESPECIAL E INCLUSIVA</td></tr>
-            <tr><td>👑 CURSO DE BIBLIOTECONOMIA</td></tr>
-            <tr><td>👑 CURSO DE ARQUEOLOGIA</td></tr>
-            <tr><td>👑 CURSO DE BANHO E TOSA</td></tr>
-            <tr><td>👑 CURSO DE PET SHOP E GESTÃO</td></tr>
-            <tr><td>👑 CURSO DE COMPORTAMENTO ANIMAL</td></tr>
-            <tr><td>👑 CURSO DE AGRICULTURA URBANA</td></tr>
-            <tr><td>👑 CURSO DE HIDROPONIA</td></tr>
-            <tr><td>👑 CURSO DE JARDINAGEM E PAISAGISMO</td></tr>
-            <tr><td>👑 CURSO DE APICULTURA</td></tr>
-            <tr><td>👑 CURSO DE AQUAPONIA</td></tr>
-            <tr><td>👑 CURSO DE MECÂNICA DE MOTOS</td></tr>
-            <tr><td>👑 CURSO DE ELETRICIDADE AUTOMOTIVA</td></tr>
-            <tr><td>👑 CURSO DE INJEÇÃO ELETRÔNICA</td></tr>
-            <tr><td>👑 CURSO DE FUNILARIA E PINTURA AUTOMOTIVA</td></tr>
-            <tr><td>👑 CURSO DE LANTERNAGEM</td></tr>
-            <tr><td>👑 CURSO DE CAMINHONEIRO PROFISSIONAL</td></tr>
-            <tr><td>👑 CURSO DE OPERADOR DE EMPILHADEIRA</td></tr>
-            <tr><td>👑 CURSO DE OPERADOR DE GUINDASTE</td></tr>
-            <tr><td>👑 CURSO DE BRIGADISTA E PREVENÇÃO DE INCÊNDIOS</td></tr>
-            <tr><td>👑 CURSO DE SOCORRISTA E RESGATE</td></tr>
-            <tr><td>👑 CURSO DE SEGURANÇA PATRIMONIAL</td></tr>
-            <tr><td>👑 CURSO DE VIGILANTE</td></tr>
-            <tr><td>👑 CURSO DE PORTEIRO E SÍNDICO</td></tr>
-            <tr><td>👑 CURSO DE RECEPCIONISTA</td></tr>
-            <tr><td>👑 CURSO DE AUXILIAR ADMINISTRATIVO</td></tr>
-            <tr><td>👑 CURSO DE DEPARTAMENTO PESSOAL</td></tr>
-            <tr><td>👑 CURSO DE CONTABILIDADE</td></tr>
-            <tr><td>👑 CURSO DE TRIBUTAÇÃO</td></tr>
-            <tr><td>👑 CURSO DE AUDITORIA</td></tr>
-            <tr><td>👑 CURSO DE GESTÃO AMBIENTAL</td></tr>
-            <tr><td>👑 CURSO DE SUSTENTABILIDADE</td></tr>
+            <tr><td>👑 COPYWRITING</td></tr>
+            
+            <tr class="category"><td>SAÚDE E BEM-ESTAR</td></tr>
+            <tr><td>👑 CURSOS DE MEDICINA</td></tr>
+            <tr><td>👑 ENFERMAGEM E SAÚDE</td></tr>
+            <tr><td>👑 NUTRIÇÃO ESPORTIVA</td></tr>
+            <tr><td>👑 PSICOLOGIA E DESENVOLVIMENTO</td></tr>
+            <tr><td>👑 PRIMEIROS SOCORROS</td></tr>
+            <tr><td>👑 ACADEMIA E CALISTENIA</td></tr>
+            
+            <tr class="category"><td>OUTROS SEGMENTOS</td></tr>
+            <tr><td>👑 IDIOMAS (INGLÊS, ESPANHOL, ETC)</td></tr>
+            <tr><td>👑 CULINÁRIA E CONFEITARIA</td></tr>
+            <tr><td>👑 MÚSICA, DJ E PRODUÇÃO</td></tr>
+            <tr><td>👑 FOTOGRAFIA E EDIÇÃO</td></tr>
+            <tr><td>👑 ADESTRAMENTO DE CÃES</td></tr>
         </tbody>
     </table>
+</div>
 
 </body>
-                                                             </html>
-                                                             
+</html>
